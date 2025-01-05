@@ -1,0 +1,15 @@
+<div class="search-container">
+  <%= simple_form_for :search, url: url, method: :get do |f| %>
+    <div class="search-form">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Rechercher un #{info}"
+      %>
+      <button type="submit" class="search-btn">
+        <i class="fas fa-search"></i>
+        <span>Rechercher</span>
+      </button>
+    </div>
+  <% end %>
+</div>

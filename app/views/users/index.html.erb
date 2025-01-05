@@ -1,0 +1,37 @@
+<div class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Nos Utilisateurs</h1>
+    <%= link_to new_user_path, class: "btn btn-primary" do %>
+      <i class="fas fa-plus me-2"></i>Nouveau
+    <% end %>
+  </div>
+  <%= render 'shared/searchbarr', url: users_path, info: "email" %>
+
+  <div class="row g-4">
+    <% @users.each do |user| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm user-card">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><%= user.email %></h5>
+           
+         
+
+            <div class="d-flex justify-content-end gap-2">
+      
+              
+              <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-sm", title: "Modifier" do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+              
+              <%= button_to user, method: :delete, :onclick => "return confirm('Êtes vous sûr ?')", class: "btn btn-outline-danger btn-sm", title: "Supprimer" do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <% end %>
+  </div>
+</div>
+

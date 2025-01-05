@@ -21,3 +21,12 @@ body {
   .container {
     background-color: rgb(199, 222, 209);
   }
+
+
+  a {
+    text-decoration: none;
+    color:rgb(53, 48, 48);
+    &:hover {
+      color: $primary;
+    }
+  }

@@ -1,0 +1,49 @@
+<div class="modal fade" id="productModal<%= product.id %>" tabindex="-1" aria-labelledby="productModalLabel<%= product.id %>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel<%= product.id %>"><%= product.name %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="product-details">
+          <div class="mb-4">
+            <h6 class="text-muted mb-2">Description</h6>
+            <p><%= product.description %></p>
+          </div>
+          
+          <div class="row mb-4">
+            <div class="col-6">
+              <h6 class="text-muted mb-2">Prix</h6>
+              <p class="fs-5 fw-bold text-primary">
+                <i class="fas fa-tag me-2"></i>
+                <%= number_to_currency(product.price) %>
+              </p>
+            </div>
+            <div class="col-6">
+              <h6 class="text-muted mb-2">Stock</h6>
+              <p class="fs-5">
+                <i class="fas fa-boxes me-2"></i>
+                <%= product.quantity %>
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6 class="text-muted mb-2">Créé par</h6>
+            <p>
+              <i class="fas fa-user me-2"></i>
+              <%= product.user.email %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <%= link_to edit_product_path(product), class: "btn btn-primary" do %>
+          <i class="fas fa-edit me-2"></i>Modifier
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

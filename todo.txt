@@ -21,9 +21,11 @@ price  (float)
 quantity (integer)
 user (references)
 
--> docker-compose exec rails generate scaffold Products name:string description:text price:float quantity:integer user:references          --no-stylesheets				
+-> docker-compose exec web rails generate scaffold Product name:string description:text price:float quantity:integer user:references --no-stylesheets
 
 réaliser un scaffold pour générer les fichiers correspondants.
+-> faire la migrations
+-> docker-compose exec web rails db:migrate
 
 afficher la liste des produits avec le nom de l'utilisateur qui les a créer.
 Dans le formulaire de création de produit, afficher la liste des utilisateurs.

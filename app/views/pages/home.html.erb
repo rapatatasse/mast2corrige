@@ -3,6 +3,19 @@
 
 <code>A faire exo dans le ficheir todo.txt</code>
 
+<!-- cards link pour aller sur les product-->
+
+
+
+<div class="card" style="width: 18rem;">
+  <%= image_tag "https://static.wixstatic.com/media/aa3599_973ea0b3564f4ce298eac3d0a45671a7~mv2.jpeg/v1/fill/w_426,h_480,fp_0.50_0.50,lg_1,q_90/aa3599_973ea0b3564f4ce298eac3d0a45671a7~mv2.webp", class: "card-img-top" %>
+  <div class="card-body">
+    <h5 class="card-title">Vos produits</h5>
+    <p class="card-text">tableau que vous avez réalisé.</p>
+    <%= link_to "Products", products_path, class:"btn btn-primary" %>
+  </div>
+</div>
+
 
 <div data-controller="hello">
   <input data-hello-target="name" type="text">
