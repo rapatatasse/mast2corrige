@@ -34,6 +34,8 @@ Dans le formulaire de création de produit, afficher la liste des utilisateurs.
 
 2/ créer un seed avec faker pour créer 50 produits différents avec un random user
 
+-> docker-compose exec web rails db:seed
+
 3/ créer un champs pour filtrer les produits par nom ou produit puis par nom d'utilisateur. 
 aider vous avec la gem "pg_search" https://github.com/Casecommons/pg_search
 
@@ -55,7 +57,7 @@ e/ ajouter un champ "admin" dans le model
 
 f/ créer une fonction général isadmin? sur la class user dans le model user qui renvoie true si admin false sinon afin que l'on puisse l'utiliser n'importe ou.
 
-g/ créer une focntion qui renvoir la date soru le bon format jj/mm/aaaa en créant un helper
+g/ créer une focntion qui renvoir la date au le bon format jj/mm/aaaa en créant un helper
 
 f/ dans home afficher un lien vers la page des users si l'utilisateur est admin sinon afficher un lien vers la page des produits de l'utilisateur connecté.
 
@@ -71,6 +73,22 @@ gem "wicked_pdf"          # gestion des pdf
 3/ créer un bouton et une action dans le controlleur pour augmenter tout les produits en fonction d'un input.
 
 4/ rajouter des cases à cocher sur la listes des produits et un autre bouton pour affecter le prix qu'au produit avec un input.
+
+
+Interro projet :
+Créer un base de données Stocks
+avec en champs :
+name (string)
+localite (string)
+capacity (integer)
+
+dans index stock afficher chaque stock et leur produit dedans de sorte que ce soit intuitif de voir si le stocks est remplis ou pas.
+faire en sorte de pouvoir attribuer des produits aux stocks.
+limiter les produits par stock. 
+capacity = 30 signifie que la somme des produits.quantity ne peut pas depasser 30.
+ne pas pouvoir supprimer un stock si il contient des produits.
+faire une action pour pouvoir transferer tout les produits d'un stock à l'autre.
+
 
 
 

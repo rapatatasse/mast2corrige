@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     if params[:query].present?
       @products = Product.all.search_products_all(params[:query]) if params[:query].present?
     else
-      @products = Product.all
+ 
     end
 
   end
