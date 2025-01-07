@@ -3,11 +3,11 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    
+    @products = Product.where(user_id: current_user.id)
     if params[:query].present?
-      @products = Product.all.search_products_all(params[:query]) if params[:query].present?
-    else
- 
+
+      @products = @products.search_products_all(params[:query]) if params[:query].present?
+    
     end
 
   end
@@ -27,9 +27,11 @@ class ProductsController < ApplicationController
     @users = User.all
   end
 
+
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
 
     respond_to do |format|
       if @product.save
@@ -55,6 +57,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def soldes
+    #solde les produit du current_user de 20%
+    raise
+    @products = Product.where(user_id: current_user.id)
+    @products.each do |product|
+      product.price = product.price * 0.8
+      product.save
+    end
+  end
+
   # DELETE /products/1 or /products/1.json
   def destroy
     @product.destroy
@@ -68,11 +80,11 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.where(user_id: current_user.id).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description, :price, :quantity, :user_id)
+      params.require(:product).permit(:name, :description, :price, :quantity)
     end
 end

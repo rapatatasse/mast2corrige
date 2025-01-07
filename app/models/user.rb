@@ -6,4 +6,12 @@ class User < ApplicationRecord
 
 
   has_many :products
+
+
+  include PgSearch::Model
+  pg_search_scope :search_users_all,
+    against: [:email],
+    using: {
+      tsearch: { prefix: true },
+    }
 end

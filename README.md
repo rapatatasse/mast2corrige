@@ -27,7 +27,7 @@ ouvrire http://localhost:8000/
 
 action pour rails (voir docker compose) :
 - docker-compose exec web rails db:create
-
+- docker-compose -p mast2testapp exec web  rails routes  
 
 #### Ruby et rails en local: ####
 installer ruby "3.2.2"

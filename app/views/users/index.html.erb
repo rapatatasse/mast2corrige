@@ -13,7 +13,10 @@
         <div class="card h-100 shadow-sm user-card">
           <div class="card-body">
             <h5 class="card-title mb-3"><%= user.email %></h5>
-           
+            <div>Nb de produicts : <%= user.products.count %></div>
+            <p><% user.products.each do |product| %>
+              <span class="badge bg-primary me-1"><%= product.name %></span>
+            <% end %></p>
          
 
             <div class="d-flex justify-content-end gap-2">
@@ -22,10 +25,11 @@
               <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-sm", title: "Modifier" do %>
                 <i class="fas fa-edit"></i>
               <% end %>
-              
-              <%= button_to user, method: :delete, :onclick => "return confirm('Êtes vous sûr ?')", class: "btn btn-outline-danger btn-sm", title: "Supprimer" do %>
-                <i class="fas fa-trash"></i>
-              <% end %>
+              <% unless user == current_user %>
+                <%= button_to user, method: :delete, :onclick => "return confirm('Êtes vous sûr ?')", class: "btn btn-outline-danger btn-sm", title: "Supprimer" do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+              <%end%>
             </div>
           </div>
         </div>
