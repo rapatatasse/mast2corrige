@@ -1,21 +1,21 @@
 
-@import "bootstrap";
-@import "font-awesome";
+@use "bootstrap" as *;
+@use "font-awesome" as *;
 /* Application styles */
-@import "pages/index";
+@use "pages/index"as *;
 
-@import "components/index";
+@use "components/index" as *;
 
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
+@use "config/fonts" as *;
+@use "config/colors" as *;
+@use "config/bootstrap_variables" as *;
 
 
 
 
 body {
     min-height: 100vh;
-    background-color: rgb(203, 75, 75);
+    background-color: rgb(97, 28, 28);
   }
   
   .container {

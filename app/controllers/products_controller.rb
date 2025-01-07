@@ -58,13 +58,24 @@ class ProductsController < ApplicationController
   end
 
   def soldes
+    
     #solde les produit du current_user de 20%
-    raise
     @products = Product.where(user_id: current_user.id)
     @products.each do |product|
       product.price = product.price * 0.8
-      product.save
+      product.save!
     end
+    redirect_to products_path, status: :see_other, notice: "Product was successfully updated."
+  end
+  def soldesselection
+    product_ids = JSON.parse(params[:products] || '[]')
+    @products = Product.where(id: product_ids)
+    
+    @products.each do |product|
+      product.price = product.price * 0.8
+      product.save!
+    end
+    redirect_to products_path, notice: "Les produits sélectionnés ont été mis en solde"
   end
 
   # DELETE /products/1 or /products/1.json
