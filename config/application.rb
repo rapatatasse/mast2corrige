@@ -23,7 +23,11 @@ module Mast2
       namespace: "cache"
     }
 
-
+    # Configure asset pipeline
+    config.assets.enabled = true
+    config.assets.paths << Rails.root.join("app", "javascript")
+    config.importmap.cache_sweeper = nil
+    config.javascript_path = "javascript"
 
     # Mount Action Cable outside the main process or domain.
     config.action_cable.mount_path = nil

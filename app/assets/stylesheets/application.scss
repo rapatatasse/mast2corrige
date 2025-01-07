@@ -1,32 +1,25 @@
+// Import Bootstrap from gem
+@import "bootstrap";
 
-@use "bootstrap" as *;
-@use "font-awesome" as *;
-/* Application styles */
-@use "pages/index"as *;
+// Import Font Awesome from gem
+@import "font-awesome";
 
-@use "components/index" as *;
-
-@use "config/fonts" as *;
-@use "config/colors" as *;
-@use "config/bootstrap_variables" as *;
-
-
-
+// Import components
+@import "components/index";
 
 body {
     min-height: 100vh;
-    background-color: rgb(97, 28, 28);
-  }
+    background-color: #1dcbb9;
+}
   
-  .container {
-    background-color: rgb(199, 222, 209);
-  }
+.container {
+    background-color: #C7DED1;
+}
 
-
-  a {
+a {
     text-decoration: none;
-    color:rgb(53, 48, 48);
+    color: #353030;
     &:hover {
-      color: $primary;
+      color: #611C1C;
     }
-  }
+}

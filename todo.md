@@ -3,33 +3,13 @@
 - text in red
 + text in green
 ! text in blue
-# text in gray
 
 
 bibli : https://sites.google.com/view/tpass-bibli/g%C3%A9n%C3%A9rateur-de-code-ruby-on-rails
 (aide pour les migrations et autre)
 
 
-
-
-1/ Créer une table "Products" avec les champs suivants :
-
-name (string)
-description (text)
-price  (float)  
-quantity (integer)
-user (references)
-
--> docker-compose exec web rails generate scaffold Product name:string description:text price:float quantity:integer user:references --no-stylesheets
-
-Exemple pour faire des action rails :
--> docker-compose exec web rails db:migrate
--> docker-compose exec web rails db:seed
-
-
-
-
-## Projet de création d’application Ruby On Rails##
+### Projet de création d’application Ruby On Rails##
 Vous devrez répondre à la problématique client en apportant une solution applicative pour gérer sa problématique. 
 - Prise en compte dans le rendu :
 interface graphique simple ergonomique et intuitive (un minimum de style svp)
@@ -38,7 +18,7 @@ Vous pouvez partir de l’application actuelle vue pendant ses trois jours ou pa
 vous pouvez aussi partir sur le site replit.com (info plus bas pour parametrage replit)
 - Problématique client :
     Nous avons besoin de digitaliser notre livre de gestion de SAV client.
-    Actuellement, nous informons sur ce cahier les information suivant :
+    Actuellement, nous informons sur ce cahier les informations suivant :
     + client [nom, prenom, adresse, telephone]
     + Sav du client [nom produit, fournisseur, date dépôt client, date retour magasin, date enlèvement client]
     pour les fournisseuses, nous avons besoin seulement de ceux ci :

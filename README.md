@@ -19,7 +19,9 @@ sinon :
 - docker-compose up
 
 si besoin de nommer le conteneur :
-- docker-compose -p mast2testapp up 
+- docker-compose -p mast2testapp2 exec web rails db:seed
+
+docker-compose -p mast2testapp up 
 
 
 ouvrire http://localhost:8000/
@@ -27,7 +29,22 @@ ouvrire http://localhost:8000/
 
 action pour rails (voir docker compose) :
 - docker-compose exec web rails db:create
+- docker-compose exec web rails db:seed
 - docker-compose -p mast2testapp exec web  rails routes  
+
+exempe de création de produits avec scaffold :
+Products[
+name (string)
+description (text)
+price  (float)  
+quantity (integer)
+user (references)]
+
+-> docker-compose exec web rails generate scaffold Product name:string description:text price:float quantity:integer user:references --no-stylesheets
+
+Exemple pour faire des action rails :
+-> docker-compose exec web rails db:migrate
+-> docker-compose exec web rails db:seed
 
 #### Ruby et rails en local: ####
 installer ruby "3.2.2"
