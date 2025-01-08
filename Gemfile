@@ -16,7 +16,7 @@ gem "pg_search"
 gem "puma", "~> 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+#gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -40,7 +40,7 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 
 # Assets and styling
-gem "bootstrap", "~> 5.3.2"
+gem "bootstrap", "~> 5.2"
 gem "sassc-rails"  # Required by bootstrap
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
@@ -56,3 +56,5 @@ group :development, :test do
   gem 'faker'
   gem "web-console"
 end
+
+gem "jsbundling-rails", "~> 1.3"

@@ -8,11 +8,7 @@ Rails.application.configure do
   config.assets.digest = true
   config.assets.compile = true
 
-  # Log importmap configuration
-  config.after_initialize do
-    Rails.logger.debug "Importmap paths: #{Rails.application.config.importmap.paths}"
-    Rails.logger.debug "Importmap cache: #{Rails.application.config.importmap.cache_path}"
-  end
+
 
   # Settings specified here will take precedence over those in config/application.rb.
 

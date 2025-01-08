@@ -32,6 +32,9 @@ action pour rails (voir docker compose) :
 - docker-compose exec web rails db:seed
 - docker-compose -p mast2testapp exec web  rails routes  
 
+rebuild pour stimulus et js :
+-docker-compose -p mast2testapp3 exec web bundle exec rails stimulus:manifest:update
+
 exempe de création de produits avec scaffold :
 Products[
 name (string)
