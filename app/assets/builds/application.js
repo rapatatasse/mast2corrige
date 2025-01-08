@@ -6968,7 +6968,7 @@
       const name = element.value;
       console.log(`Helloooooo, ${name}!`);
       this.resultTarget.innerHTML = `
-    <p>Vous utilisez  pour marquer : ${name}!</p>
+    <p>Vous utilisez  stimulus pour marquer : ${name}!</p>
     <p>\xE7a sert a rien mais c'est une bonne base :)</p>
     <p>Retrouvez moi dans hello_controlleur</p>
 `;

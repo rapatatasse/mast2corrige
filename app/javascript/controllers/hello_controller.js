@@ -12,7 +12,7 @@ export default class extends Controller {
     const name = element.value
     console.log(`Helloooooo, ${name}!`)
     this.resultTarget.innerHTML = `
-    <p>Vous utilisez  pour marquer : ${name}!</p>
+    <p>Vous utilisez  stimulus pour marquer : ${name}!</p>
     <p>ça sert a rien mais c'est une bonne base :)</p>
     <p>Retrouvez moi dans hello_controlleur</p>
 `  
