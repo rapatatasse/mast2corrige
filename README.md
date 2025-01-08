@@ -14,6 +14,8 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 docker :
 1ere lancement et lorsque changement de gems :
 - docker-compose -p mast2testapp2 up --build 
+pour ubuntu :
+- docker compose -p mast2testapp2 up  --build
 
 sinon :
 - docker-compose  -p mast2testapp2 up

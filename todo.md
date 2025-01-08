@@ -29,8 +29,8 @@ vous pouvez aussi partir sur le site replit.com (info plus bas pour parametrage 
     De voir toutes les SAV en cours et pouvoir les filtrer par nom produit, fournisseur ou nom client.
     de pouvoir voir facilement la liste des SAV suivant leur état : sans date retour magasin et sans date enlèvement client.
     Action en lot : besoin de pouvoir passer toutes les SAV en avec [date retour magasin]=nil en [date retour magasin]=date d’aujourd’hui 
-    Avoir un bouton pour avoir une vue JSON sur la liste des salarie 
-    Avoir un bouton pour avoir un export CSV sur la liste des salarie (avec petit plus dans une colonne mettre la liste des SAv du client avec [nom produit, date depot client, date retour magasin, date enlevement client])
+    Avoir un bouton pour avoir une vue JSON sur la liste des clients
+    Avoir un bouton pour avoir un export CSV sur la liste des clients (avec petit plus dans une colonne mettre la liste des SAv du client avec [nom produit, date depot client, date retour magasin, date enlevement client])
 
 
 
